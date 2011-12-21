@@ -8,4 +8,4 @@ $endPos = strpos($atom, '.jar');
 $atom = substr($atom, 0, $endPos + 4);
 
 $out = "<?php header('Location: $atom', true, 302); ?>";
-file_put_contents('web/index.php', $out);
+file_put_contents(__DIR__ . '/web/index.php', $out);
